@@ -14,6 +14,6 @@ class Genre < ActiveRecord::Base
 
   def all_artist_names
     # return an array of strings containing every musician's name
-    self.songs.map{|s|s.artist}.unique.map{|a|a.name}
+    self.songs.map{|s|s.artist}.uniq.map{|a|a.name}
   end
 end
